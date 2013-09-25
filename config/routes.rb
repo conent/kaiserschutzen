@@ -1,4 +1,20 @@
 Kaiserschutzen::Application.routes.draw do
+  get 'aboutus' => 'pages#aboutus'
+
+  get 'article' => 'pages#article'
+
+  get 'dbconnct' => 'pages#dbconnct'
+
+  get 'eventsphoto' => 'pages#eventsphoto'
+
+  get 'history' => 'pages#history'
+
+  get 'kaisercalendar' => 'pages#kaisercalendar'
+
+  get 'oldphoto' => 'pages#oldphoto'
+
+  root :to => 'pages#home'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
