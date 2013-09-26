@@ -5,27 +5,7 @@
 
         <div class="span9">
             <%= Article.all %>
-            <?php
-            $test = read_articles();
-                    //var_dump($test);
-
-            $number_articles = sizeof($test);
-
-            foreach ($test as $article) {
-                ?>
-
-
-                <div class="hero-unit">
-                    <h1><?php echo $article["title"]; ?> </h1>
-                    <p><?php echo $article ["story"]; ?> </p>
-                    <p><a href="article.php?id=<?php echo ($article ["id"]); ?>" class="btn btn-primary btn-large">Learn more &raquo;</a>
-                    </p>
-                </div>
-
-
-                <?php
-            }
-            ?>
+            
 
         </div><!--/span-->
     </div><!--/row-->
