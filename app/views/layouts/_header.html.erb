@@ -1,14 +1,46 @@
 <div class ="span12" id="title" style="padding-top: 5px">
 
-                        <table style="margin: 0 auto">
-                            <tr>
-                                <td rowspan="2"><img src="./assets/img/austrunghst.gif" alt="austria" width="150" height="150" align="middle"></td>
-                                <td style="padding-top: 9%; font-size: 30px; text-align: center; color: white">Keisersch&#252;tzen Trient
-                                    <br>
-                                    <img src="./assets/img/bildausgabe-small.png" alt="welshtirol" width="200" height="100" style="max-width: 40%" ></td>
-                                    <td rowspan="2"><img src="./assets/img/bandiera-tirol.jpg" alt="tirolo" width="150" height="150" align="middle"> </td>
-                                </tr>
-                            </table>
+    <table style="margin: 0 auto">
+        <tr>
+            <td rowspan="2"><img src="http://i.imgur.com/6druyQu.gif" alt="austria" width="150" height="150" align="middle"></td>
+            <td style="padding-top: 9%; font-size: 30px; text-align: center; color: white">Keisersch&#252;tzen Trient
+                <br>
+                <img src="http://i.imgur.com/S9YN04u.png" alt="welshtirol" width="200" height="100" style="max-width: 40%" ></td>
+                <td rowspan="2"><img src="http://i.imgur.com/e8mQW3R.jpg" alt="tirolo" width="150" height="150" align="middle"> </td>
+            </tr>
+        </table>
 
 
-                        </div>
+    </div>
+
+
+    <div class="navbar navbar-inverse ">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+
+
+
+                <div class="nav-collapse collapse">
+                    <ul class="nav" style="left: 25%; font-size: 24px">
+                        <li <% if (request.fullpath.casecmp "/") == 0 %> class="active" <% end %> ><%= link_to "Home", root_path %></li>
+                        <li <% if (request.fullpath.casecmp "/aboutus") == 0 %> class="active" <% end %> ><%= link_to "Chi siamo", aboutus_path %></li>
+                        <li <% if (request.fullpath.casecmp "/history") == 0 %> class="active" <% end %> ><%= link_to "Storia", history_path %></li> 
+                        <% if ((request.fullpath.casecmp "/oldphoto") == 0 || (request.fullpath.casecmp "/eventsphoto") == 0) %> <li class="dropdown active"> <% else %>
+                        <li class="dropdown"> <% end %>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Foto <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li <% if (request.fullpath.casecmp "/oldphoto") == 0 %> class="active" <% end %> ><%= link_to "Foto Storiche", oldphoto_path %></li>
+                                <li <% if (request.fullpath.casecmp "/eventsphoto") == 0 %> class="active" <% end %>><%= link_to "Foto Eventi", eventsphoto_path %></li>
+                            </ul></li>
+                            <li <% if (request.fullpath.casecmp "/kaisercalendar") == 0 %> class="active" <% end %>><%= link_to "Calendario", kaisercalendar_path %></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
