@@ -3,8 +3,6 @@ Kaiserschutzen::Application.routes.draw do
 
   get 'article' => 'pages#article'
 
-  get 'dbconnct' => 'pages#dbconnct'
-
   get 'eventsphoto' => 'pages#eventsphoto'
 
   get 'history' => 'pages#history'
