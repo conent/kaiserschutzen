@@ -1,4 +1,7 @@
 Kaiserschutzen::Application.routes.draw do
+  resources :reports
+
+
   get 'aboutus' => 'pages#aboutus'
 
   get 'article' => 'pages#article'

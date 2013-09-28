@@ -11,9 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130926142831) do
+ActiveRecord::Schema.define(:version => 20130928123145) do
 
-  create_table "articles", :force => true do |t|
+  create_table "reports", :force => true do |t|
     t.string   "title"
     t.text     "story"
     t.datetime "created_at", :null => false

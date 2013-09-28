@@ -1,0 +1,20 @@
+
+<div class="container-fluid">
+	<p id="notice"><%= notice %></p>
+<div class="hero-unit" style="margin:10px">
+<h2>
+  <%= @report.title %>
+</h2>
+
+<p>
+  <%= @report.story %>
+</p>
+</div>
+
+
+<%= render 'layouts/footer'%>
+
+<!-- <%= link_to 'Edit', edit_report_path(@report) %> |
+<%= link_to 'Back', reports_path %>
+-->
+</div>

@@ -3,8 +3,23 @@
         <%= render 'layouts/links' %>
 
 
-        <div class="span9">
-             <%= Article.all %> 
+	     
+             <div class="span9">
+                
+          
+
+<% @articles=Report.all  
+ @articles.each do |report| %>
+ <div class="hero-unit">
+    <h2><%= report.title %></h2>
+    <p><%= report.story %></p>
+    	 <p><%= link_to 'Leggi Articolo', report %></a>
+                                    </p>
+                                </div>
+<% end %>
+                                
+                             
+                               
             
 
         </div><!--/span-->
