@@ -6,16 +6,22 @@
 	     
              <div class="span9">
                 
-          
+          <!-- per andare al contrario mettere order("created_at desc") al posto di all -->
 
-<% @articles=Report.all  
- @articles.each do |report| %>
- <div class="hero-unit">
-    <h2><%= report.title %></h2>
-    <p><%= report.story %></p>
-    	 <p><%= link_to 'Leggi Articolo', report %></a>
-                                    </p>
-                                </div>
+<% @articles=Report.all.each do |report|  
+    stringa=report.story  %>
+        <div class="hero-unit">
+            <h2><%= report.title %></h2>
+            <% if report.image.exists? %>
+                <%= image_tag @report.image(:medium) %>
+            <% end %>
+    <% if stringa.length < 200 %>
+            <p><%= report.story %></p>
+    <% else %>
+            <p><%= stringa[0..199]<<"..." %></p>
+    <% end %>
+            <p><%= link_to 'Leggi Articolo', report %></p>    
+        </div>
 <% end %>
                                 
                              
