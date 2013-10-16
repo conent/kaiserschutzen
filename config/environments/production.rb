@@ -68,7 +68,7 @@ Kaiserschutzen::Application.configure do
   #paperclip save file on aws s3 amazon
   config.paperclip_defaults = {
     :storage => :s3,
-    Paperclip::Attachment.default_options[:s3_host_name] = 's3-us-west-2.amazonaws.com'
+    
     :s3_credentials => {
       :bucket => ENV['AWS_BUCKET'],
       :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
