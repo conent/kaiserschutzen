@@ -6,7 +6,7 @@
   <%= @report.title %>
 </h2>
             <% if @report.image.exists? %>
-	<%= image_tag @report.image %>
+	<%= image_tag @report.image.url %>
 	<% end %>
 <p>
   <%= @report.story %>
