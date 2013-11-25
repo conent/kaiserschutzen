@@ -10,18 +10,20 @@
 
 <% @articles=Report.all.each do |report|  
     stringa=report.story  %>
-        <div class="hero-unit">
-            <h2><%= report.title %></h2>
-            <% if report.image.exists? %>
-               <%= image_tag report.image.url(:medium), style: "display: block; margin-left: auto; margin-right: auto;" %>
+    <% if report.id < 2 %>
+                <div class="hero-unit">
+                    <h2><%= report.title %></h2>
+                    <% if report.image.exists? %>
+                       <%= image_tag report.image.url(:medium), style: "display: block; margin-left: auto; margin-right: auto;" %>
+                    <% end %>
+            <% if stringa.length < 200 %>
+                    <p><%= report.story %></p>
+            <% else %>
+                    <p><%= stringa[0..199]<<"..." %></p>
             <% end %>
-    <% if stringa.length < 200 %>
-            <p><%= report.story %></p>
-    <% else %>
-            <p><%= stringa[0..199]<<"..." %></p>
+                    <p><%= link_to 'Leggi Articolo', report %></p>    
+                </div>
     <% end %>
-            <p><%= link_to 'Leggi Articolo', report %></p>    
-        </div>
 <% end %>
                                 
                              
