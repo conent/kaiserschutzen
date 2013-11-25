@@ -10,7 +10,7 @@
 
 <% @articles=Report.all.each do |report|  
     stringa=report.story  %>
-    <% if report.id < 2 %>
+    <% if report.id <= 2 %>
                 <div class="hero-unit">
                     <h2><%= report.title %></h2>
                     <% if report.image.exists? %>
