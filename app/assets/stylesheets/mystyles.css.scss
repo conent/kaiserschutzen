@@ -29,3 +29,8 @@
 .album-unit li {
     line-height: 30px;
 }
+
+.inactiveLink {
+   pointer-events: none;
+   cursor: default;
+}
